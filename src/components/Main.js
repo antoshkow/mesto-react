@@ -6,21 +6,29 @@ function Main({ onEditAvatar, onAddPlace, onEditProfile, onCardClick }) {
   const [userName, setUserName] = React.useState('');
   const [userDescription, setUserDescription] = React.useState('');
   const [userAvatar, setUserAvatar] = React.useState('');
-  const [cards, getCards] = React.useState([]);
+  const [cards, setCards] = React.useState([]);
 
-  api.getUserInfo()
-    .then((userData) => {
-      setUserName(userData.name);
-      setUserDescription(userData.about);
-      setUserAvatar(userData.avatar);
-    })
+  React.useEffect(() => {
+    api.getUserInfo()
+      .then((userData) => {
+        setUserName(userData.name);
+        setUserDescription(userData.about);
+        setUserAvatar(userData.avatar);
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  }, []);
 
   React.useEffect(() => {
     api.getInitialCards()
       .then((data) => {
-        getCards(data);
+        setCards(data)
+      })
+      .catch((err) => {
+        console.log(err)
       });
-  }, [])
+  }, []);
 
   return (
     <main>
@@ -39,7 +47,15 @@ function Main({ onEditAvatar, onAddPlace, onEditProfile, onCardClick }) {
       </section>
       <ul className="elements">
         {
-          cards.map((card) => <Card key={card.id} name={card.name} link={card.link} likes={card.likes} onCardClick={onCardClick} />)
+          cards.map((card) => (
+            <Card
+              key={card._id}
+              name={card.name}
+              link={card.link}
+              likes={card.likes}
+              onCardClick={onCardClick}
+              />
+          ))
         }
       </ul>
     </main>

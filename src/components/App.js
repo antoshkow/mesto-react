@@ -7,25 +7,25 @@ import PopupWithForm from './PopupWithForm';
 import ImagePopup from './ImagePopup';
 
 function App() {
-  const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = React.useState(false);
-  const [isEditProfilePopupOpen, setEditProfilePopupOpen] = React.useState(false);
-  const [isAddPlacePopupOpen, setAddPlacePopupOpen] = React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
+  const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
 
   const [selectedCard, setSelectedCard] = React.useState(null);
 
   function handleEditAvatarClick() {
-    setEditAvatarPopupOpen(!isEditAvatarPopupOpen);
+    setIsEditAvatarPopupOpen(!isEditAvatarPopupOpen);
   }
   function handleEditProfileClick() {
-    setEditProfilePopupOpen(!isEditProfilePopupOpen);
+    setIsEditProfilePopupOpen(!isEditProfilePopupOpen);
   }
   function handleAddPlaceClick() {
-    setAddPlacePopupOpen(!isAddPlacePopupOpen);
+    setIsAddPlacePopupOpen(!isAddPlacePopupOpen);
   }
   function closeAllPopups() {
-    setEditProfilePopupOpen(false);
-    setAddPlacePopupOpen(false);
-    setEditAvatarPopupOpen(false);
+    setIsEditProfilePopupOpen(false);
+    setIsAddPlacePopupOpen(false);
+    setIsEditAvatarPopupOpen(false);
     setSelectedCard(null);
   }
 
@@ -40,10 +40,8 @@ function App() {
        />
       <Footer />
       <ImagePopup
-      name='A'
-      link='B'
-      card={selectedCard}
-      onClose={closeAllPopups}
+        card={selectedCard}
+        onClose={closeAllPopups}
       />
       <PopupWithForm
         name={'profile'}
@@ -81,20 +79,7 @@ function App() {
           <span className="popup__error" id="popup-avatar-link-error"></span>
       </PopupWithForm>
       <ImagePopup />
-        <template className="template template_type_default">
-          <li className="element">
-            <button type="button" className="element__trash"></button>
-            <img src="#" alt="Фото" className="element__img" />
-            <div className="element__bottom">
-              <h2 className="element__title"></h2>
-              <div className="element__likes">
-                <button type="button" className="element__like"></button>
-                <p className="element__counter">0</p>
-              </div>
-            </div>
-          </li>
-        </template>
-      </div>
+    </div>
   );
 }
 
