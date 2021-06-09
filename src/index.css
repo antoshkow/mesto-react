@@ -22,6 +22,7 @@
 @import url(./blocks/element/__like/_status/element__like_status_active.css);
 @import url(./blocks/element/__counter/element__counter.css);
 @import url(./blocks/element/trash/element__trash.css);
+@import url(./blocks/element/trash/_visible/element__trash_visible.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
 @import url(./blocks/popup/popup.css);
