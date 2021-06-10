@@ -1,4 +1,6 @@
-export default class FormValidator {
+import { validationConfig, popup, cardsPopup, avatarPopupSelector } from './utils';
+
+class FormValidator {
   constructor(config, formElement) {
     this._config = config;
     this._formElement = formElement;
@@ -80,3 +82,9 @@ export default class FormValidator {
     this.toggleButtonState();
   }
 }
+
+// const addValidator = new FormValidator(validationConfig, cardsPopup);
+// const profileValidator = new FormValidator(validationConfig, popup);
+// const avatarValidator = new FormValidator(validationConfig, avatarPopupSelector);
+
+// export { addValidator, profileValidator, avatarValidator };

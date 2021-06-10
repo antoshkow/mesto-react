@@ -1,5 +1,7 @@
 {
   "name": "mesto-react",
+  "author": "Антон Земсков",
+  "description": "Сервис для обмена фотографиями Mesto",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

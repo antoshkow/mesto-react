@@ -25,8 +25,8 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace, btnText }) {
 
   return (
     <PopupWithForm
-      name={'add'}
-      title={'Новое место'}
+      name="add"
+      title="Новое место"
       btnText={btnText}
       isOpen={isOpen}
       onClose={onClose}

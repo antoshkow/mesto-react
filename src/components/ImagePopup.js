@@ -1,7 +1,7 @@
 function ImagePopup({ card, onClose }) {
   return (
     <section
-      className={`popup popup_lightbox ${card && 'popup_opened'}`}
+      className={`popup popup_lightbox ${card.isOpened ? 'popup_opened' : ''}`}
     >
       <figure className="popup__figure">
         <button
@@ -11,14 +11,14 @@ function ImagePopup({ card, onClose }) {
           onClick={onClose}
         />
         <img
-          src={card ? card.link : ''}
+          src={card.link}
           alt="Фото"
           className="popup__photo"
         />
         <figcaption
           className="popup__figcaption"
         >
-          {card ? card.name : ''}
+          {card.name}
         </figcaption>
       </figure>
     </section>

@@ -10,8 +10,8 @@ function SubmitPopup({ isOpen, onClose, onSubmitDelete, btnText }) {
 
   return (
     <PopupWithForm
-      name={'confirm'}
-      title={'Вы уверены?'}
+      name="confirm"
+      title="Вы уверены?"
       btnText={btnText}
       isOpen={isOpen}
       onClose={onClose}

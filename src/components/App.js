@@ -10,6 +10,7 @@ import AddPlacePopup from './AddPlacePopup';
 import ImagePopup from './ImagePopup';
 import CurrentUserContext from '../contexts/CurrentUserContext';
 import api from '../utils/api';
+// import { addValidator, profileValidator, avatarValidator } from '../utils/formValidator';
 
 function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
@@ -19,7 +20,7 @@ function App() {
 
   const [cardId, setCardId] = React.useState(null);
   const [cards, setCards] = React.useState([]);
-  const [selectedCard, setSelectedCard] = React.useState(null);
+  const [selectedCard, setSelectedCard] = React.useState({ isOpened: false });
   const [currentUser, setCurrentUser] = React.useState({});
   const [loading, setLoading] = React.useState(null);
 
@@ -76,7 +77,7 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
-    setSelectedCard(null);
+    setSelectedCard({ isOpened: false });
     setIsSubmitPopupOpen(false);
   }
 
@@ -150,6 +151,20 @@ function App() {
     setLoading('Создание...')
   }
 
+  //Обработчик клика по картинке
+  function handleCardClick({ link, name, isOpened }) {
+    setSelectedCard({
+      link,
+      name,
+      isOpened: !isOpened
+    });
+  }
+
+  //запуск валидации
+  // addValidator.enableValidation();
+  // profileValidator.enableValidation();
+  // avatarValidator.enableValidation();
+
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
@@ -158,7 +173,7 @@ function App() {
           onEditProfile={handleEditProfileClick}
           onEditAvatar={handleEditAvatarClick}
           onAddPlace={handleAddPlaceClick}
-          onCardClick={setSelectedCard}
+          onCardClick={handleCardClick}
           onCardLike={handleCardLike}
           onCardDelete={handleSubmitClick}
           getCardId={setCardId}
