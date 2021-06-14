@@ -10,7 +10,6 @@ import AddPlacePopup from './AddPlacePopup';
 import ImagePopup from './ImagePopup';
 import CurrentUserContext from '../contexts/CurrentUserContext';
 import api from '../utils/api';
-// import { addValidator, profileValidator, avatarValidator } from '../utils/formValidator';
 
 function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
@@ -159,11 +158,6 @@ function App() {
       isOpened: !isOpened
     });
   }
-
-  //запуск валидации
-  // addValidator.enableValidation();
-  // profileValidator.enableValidation();
-  // avatarValidator.enableValidation();
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
