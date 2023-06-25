@@ -1,20 +1,20 @@
-# Место
+# Mesto
 
-## Проектная работа 3
-## *Данная работа - сырая версия, большинство багов исправлено в [связанном](https://github.com/antoshkow/react-mesto-auth/ "Ссылка на репо.") репозитории!*
+## Project work 3.
+## *This work is a raw version, most of the bugs are fixed in the [linked](https://github.com/antoshkow/react-mesto-auth/ "Link to the repo.") repository!*
 
-1. Проектная работа "Место" (спринт 10-11).
+1. Project work "Mesto" (sprint 10-11).
 
-2. Интерактивная страница, куда можно добавлять фотографии, удалять их, ставить лайки. Логика написана на JavaScript (появление pop-up окон, валидация форм, добавление карточек и т.п.). В *5-ом спринте* мы реализовали открытие/закрытие и функционал поп-апа добавления элементов, их удаление, а также поп-ап с lightbox-изображением. В *6-ом спринте* мы разработали валидацию форм и улучшили UX при работе с поп-апами. *7 спринт* - рефакторинг кода, начало работы с ООП и модулями (добавлены классы Card и FormValidator). *8 спринт* - код переписан в соответствии с ООП, модульный код собран с помощью Webpack. *9 спринт* - сайт подключен к api. Улучшены ux/ui составляющие.
-Данная работа - порт проекта на React JS (со всем функционалом, кроме валидации) (*10-11 спринты*).
+2. An interactive page where you can add photos, delete them, put likes. The logic is written in JavaScript (appearance of pop-up windows, form validation, adding cards, etc.). In the *5th sprint* we implemented opening/closing and pop-up functionality for adding elements, removing them, as well as pop-up with a lightbox image. In *6th sprint* we developed form validation and improved UX when working with pop-ups. *Sprint 7* - code refactoring, getting started with OOP and modules (added Card and FormValidator classes). *8 sprint* - code rewritten in accordance with OOP, modular code built using Webpack. *9 sprint* - the site is connected to api. Improved ux/ui components.
+This work is a port of the project on React JS (with all functionality except validation) (*10-11 sprints*).
 
-3. Применяемые технологии:
+3. Applied technologies:
   - flexbox;
   - grid layout;
-  - адаптивная верстка;
-  - код написан в соответствии с ООП/на реакте переписан на функциональные компоненты;
-  - применяется сборщик модулей (Webpack);
+  - adaptive layout;
+  - the code is written in accordance with OOP / rewritten in react into functional components.;
+  - module bundler (Webpack);
   - framework ReactJS;
-  - React-хуки.
+  - React-hooks.
 
-4. Системные требования: язык HTML5/CSS3/JavaScript; web-браузер (браузер автора - Opera), сборщик - Webpack, фреймворк - React.
+4. System preferences: HTML5/CSS3/JavaScript, web-browser (dev browser – Opera), module bundler – Webpack, JS framework – React.
